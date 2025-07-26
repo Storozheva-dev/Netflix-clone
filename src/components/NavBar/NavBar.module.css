@@ -70,3 +70,6 @@
 .navbarProfile:hover .dropdown {
   display: block;
 }
+.navDark {
+  background: #141414 !important;
+}

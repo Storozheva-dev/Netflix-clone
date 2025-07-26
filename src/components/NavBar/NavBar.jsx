@@ -5,10 +5,23 @@ import SearchIcon from "../../assets/search_icon.svg";
 import BellIcon from "../../assets/bell_icon.svg";
 import ProfileImg from "../../assets/profile_img.png";
 import CaretIcon from "../../assets/caret_icon.svg";
+import { useRef, useEffect } from "react";
 
 const NavBar = () => {
+  const navRef = useRef();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!navRef.current) return;
+      navRef.current.className =
+        window.scrollY >= 80 ? `${css.navbar} ${css.navDark}` : css.navbar;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <div className={css.navbar}>
+    <div ref={navRef} className={css.navbar}>
       <div className={css.navbarLeft}>
         <img src={Logo} className={css.navbarLogo} alt="Netflix logo"></img>
         <ul>
