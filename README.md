@@ -1,12 +1,100 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎬 Netflix Clone
 
-Currently, two official plugins are available:
+A responsive desktop web application that replicates the core functionality and visual aesthetic of Netflix. This project showcases key features such as movie browsing, authentication, and trailer previews — built using modern React technologies and The Movie Database (TMDB) API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔐 **Authentication** with Firebase (Login & Sign-up pages)
+- 🏠 **Homepage** with categorized movie lists fetched from TMDB API
+- 🎞️ **Movie Preview Page** – opens a trailer in a new tab via YouTube
+- 🍿 **Live movie data** from TMDB (titles, thumbnails, ratings, genres)
+- 📂 **React Router DOM** for seamless navigation
+- 🔔 **Toast notifications** via React Toastify
+- 🌐 **Styled UI components** (Navbar, Footer with hover effects)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> 🔹 Navigation bar is static and includes hover effects and a logout dropdown.  
+> 🔹 Footer is styled but contains placeholder links only.
+
+## 🛠 Tech Stack
+
+- **React**
+- **Vite**
+- **React Router DOM**
+- **Firebase Authentication**
+- **TMDB API**
+- **React Toastify**
+- **CSS Modules**
+
+## 📸 Screenshots
+
+### 🔐 Login Page
+
+![Login Page](screenshots/logPage.png)
+
+### 🏠 Homepage
+
+![HomePage](screenshots/homePage.png)
+
+### 🔻 Footer Section
+
+![FooterSection](screenshots/footer.png)
+
+### 📽️ Player Page (YouTube Trailer)
+
+![PlayerPage](screenshots/playerPage.png)
+
+## 🔐 Firebase Authentication
+
+- Firebase is used to handle user sign-up and login.
+- User credentials are securely managed through Firebase Auth.
+- On successful login or registration, users are redirected to the homepage.
+
+## 📁 Folder Structure (Simplified)
+
+```bash
+src/
+├── assets/
+│   ├── screenshots/        # App screenshots for README
+│   ├── cards/              # Movie visuals
+│   └── ...                 # Other media (icons, logo)
+│
+├── components/
+│   ├── Footer/
+│   │   ├── Footer.jsx
+│   │   └── Footer.module.css
+│   ├── Navbar/
+│   │   ├── Navbar.jsx
+│   │   └── Navbar.module.css
+│   ├── TitleCards/
+│   │   ├── TitleCards.jsx
+│   │   └── TitleCards.module.css
+│   │
+│   └── pages/              # Route pages
+│       ├── Home/
+│       │   ├── Home.jsx
+│       │   └── Home.module.css
+│       ├── Login/
+│       │   ├── Login.jsx
+│       │   └── Login.module.css
+│       ├── Player/
+│           ├── Player.jsx
+│           └── Player.module.css
+│
+├── App.jsx
+├── firebase.js
+├── index.css
+└── main.jsx
+📦 Setup & Run Locally
+
+git clone https://github.com/your-username/netflix-clone.git
+cd netflix-clone
+npm install
+npm run dev
+
+📄 License
+This project is for educational purposes only. Not affiliated with Netflix Inc.
+
+Made with 🍿 & ❤️ by Storozheva Dev
+```
