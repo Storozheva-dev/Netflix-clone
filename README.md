@@ -41,13 +41,15 @@ A responsive desktop web application that replicates the core functionality and 
 
 ![Home Page](https://raw.githubusercontent.com/Storozheva-dev/Netflix-clone/main/src/assets/screenshots/homePage.png)
 
+### 🔻 Footer Section
+
+![Footer Section](https://raw.githubusercontent.com/Storozheva-dev/Netflix-clone/main/src/assets/screenshots/footer.png)
+
 ### 📽️ Player Page
 
 ![Player Page](https://raw.githubusercontent.com/Storozheva-dev/Netflix-clone/main/src/assets/screenshots/playerPage.png)
 
-### 🔻 Footer Section
 
-![Footer Section](https://raw.githubusercontent.com/Storozheva-dev/Netflix-clone/main/src/assets/screenshots/footer.png)
 
 ## 🔐 Firebase Authentication
 
@@ -92,7 +94,7 @@ src/
 └── main.jsx
 📦 Setup & Run Locally
 
-git clone https://github.com/your-username/netflix-clone.git
+git clone git@github.com:Storozheva-dev/Netflix-clone.git
 cd netflix-clone
 npm install
 npm run dev
