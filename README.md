@@ -31,19 +31,23 @@ A responsive desktop web application that replicates the core functionality and 
 
 ### 🔐 Login Page
 
-![Login Page](screenshots/logPage.png)
+## 📸 Screenshots
 
-### 🏠 Homepage
+### 🔐 Login Page
 
-![HomePage](screenshots/homePage.png)
+![Login Page](https://raw.githubusercontent.com/Storozheva-dev/Netflix-clone/main/src/assets/screenshots/logPage.png)
+
+### 🏠 Home Page
+
+![Home Page](https://raw.githubusercontent.com/Storozheva-dev/Netflix-clone/main/src/assets/screenshots/homePage.png)
+
+### 📽️ Player Page
+
+![Player Page](https://raw.githubusercontent.com/Storozheva-dev/Netflix-clone/main/src/assets/screenshots/playerPage.png)
 
 ### 🔻 Footer Section
 
-![FooterSection](screenshots/footer.png)
-
-### 📽️ Player Page (YouTube Trailer)
-
-![PlayerPage](screenshots/playerPage.png)
+![Footer Section](https://raw.githubusercontent.com/Storozheva-dev/Netflix-clone/main/src/assets/screenshots/footer.png)
 
 ## 🔐 Firebase Authentication
 
