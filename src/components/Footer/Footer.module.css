@@ -29,3 +29,11 @@
   color: gray;
   font-size: 14px;
 }
+.footerIcons img:hover {
+  filter: drop-shadow(0 0 5px white);
+  transition: filter 0.3s ease;
+}
+ul li:hover {
+  filter: drop-shadow(0 0 5px white);
+  transition: filter 0.3s ease;
+}

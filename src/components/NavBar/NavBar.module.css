@@ -73,3 +73,24 @@
 .navDark {
   background: #141414 !important;
 }
+
+@media (max-width: 800px) {
+  .navbarLeft ul {
+    display: none;
+  }
+  .navbar {
+    padding: 20px 4%;
+  }
+  .navbar img {
+    width: 25px;
+  }
+}
+.navbarLinks li:hover {
+  filter: drop-shadow(0 0 5px white);
+  transition: filter 0.3s ease;
+}
+.navbarRight img:hover,
+.navbarRight p:hover {
+  filter: drop-shadow(0 0 5px white);
+  transition: filter 0.3s ease;
+}

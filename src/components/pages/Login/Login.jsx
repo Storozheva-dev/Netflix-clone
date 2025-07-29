@@ -2,31 +2,75 @@ import css from "./Login.module.css";
 import React from "react";
 import Logo from "../../../assets/logo.png";
 import { useState } from "react";
+import { login, signUp } from "../../../firebase";
+import NetflixSpinner from "../../../assets/netflix_spinner.gif";
 
 const Login = () => {
   const [signState, setSignState] = useState("Sign In");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  return (
+  const user_auth = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    if (signState === "Sign Up") {
+      await signUp(email, password, name);
+    } else {
+      await login(email, password);
+    }
+    setLoading(false);
+  };
+
+  return loading ? (
+    <div className={css.loginSpinner}>
+      <img src={NetflixSpinner} alt="Netflix Logo" />
+    </div>
+  ) : (
     <div className={css.login}>
       <img src={Logo} alt="Netflix Logo" />
       <div className={css.loginForm}>
         <h1>{signState}</h1>
         <form>
           {signState === "Sign Up" ? (
-            <input type="name" placeholder="Your name" />
+            <input
+              type="name"
+              placeholder="Your name"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            />
           ) : (
             <></>
           )}
 
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button>{signState}</button>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
+          <button onClick={user_auth} type="submit">
+            {signState}
+          </button>
           <div className={css.formHelp}>
             <div className={css.remember}>
               <input type="checkbox" />
               <label htmlFor="">Remember me</label>
             </div>
-            <p>Need Help?</p>
+            <p style={{ cursor: "pointer" }}>Need Help?</p>
           </div>
         </form>
         <div className={css.formSwitch}>

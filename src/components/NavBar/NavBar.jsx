@@ -6,6 +6,8 @@ import BellIcon from "../../assets/bell_icon.svg";
 import ProfileImg from "../../assets/profile_img.png";
 import CaretIcon from "../../assets/caret_icon.svg";
 import { useRef, useEffect } from "react";
+import { logout } from "../../firebase";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const navRef = useRef();
@@ -24,7 +26,7 @@ const NavBar = () => {
     <div ref={navRef} className={css.navbar}>
       <div className={css.navbarLeft}>
         <img src={Logo} className={css.navbarLogo} alt="Netflix logo"></img>
-        <ul>
+        <ul className={css.navbarLinks}>
           <li>Home</li>
           <li>TV Shows</li>
           <li>Movies</li>
@@ -49,7 +51,7 @@ const NavBar = () => {
             className={css.navbarCaretIcon}
           ></img>
           <div className={css.dropdown}>
-            <p>Sign out of Netflix</p>
+            <p onClick={logout}>Sign out of Netflix</p>
           </div>
         </div>
       </div>

@@ -79,3 +79,13 @@
   font-weight: 500;
   transition: all 0.3s ease;
 }
+.loginSpinner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginSpinner img {
+  width: 60px;
+}
